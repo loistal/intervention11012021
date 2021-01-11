@@ -1,6 +1,4 @@
 <?php
-    require('reportwindow/interventionreport_cf.php');
-
     $PA['client'] = 'client';
     $PA['employeemainid'] = 'uint';
     $PA['startdate'] = 'date';
@@ -52,6 +50,7 @@
             if ($interventions[$i]['interventionemployeeid'] === '0') 
             {
                 $interventions[$i]['interventionemployeeid'] = '';
+                $interventions[$i]['interventionemployeename'] = '';
             }
             else 
             {
@@ -66,14 +65,11 @@
                         . ', ' 
                         . $query_result[0]['employeefirstname'];
                 }
-                else 
-                {
-                    $interventions[$i]['interventionemployeename'] = '';
-                }
             }
             if ($interventions[$i]['interventionclientid'] === '0') 
             {
                 $interventions[$i]['interventionclientid'] = '';
+                $interventions[$i]['interventionclientname'] = '';
             }
             else 
             {
@@ -85,16 +81,45 @@
                 {
                     $interventions[$i]['interventionclientname'] = $query_result[0]['clientname'];
                 }
-                else 
-                {
-                    $interventions[$i]['interventionclientname'] = '';
-                }
             }
         }
-
-        $row = $interventions;
     }
-    
-    $reportid = 255;
-    require('inc/showreport.php');
+?>
+
+<?php 
+    showtitle_new('Interventions');
+    echo d_table('report'); 
+    echo d_tr();
+?>
+<thead>
+    <th>Numéro</th>
+    <th>Date</th>
+    <th>Titre</th>
+    <th>Client</th>
+    <th>Employé</th>
+    <th>Commentaire</th>
+</thead>
+<tbody>
+    <?php 
+        for($i = 0; $i < $num_interventions; $i++)
+        {
+            echo d_tr();
+            echo d_td($interventions[$i]['interventionid']);
+            echo d_td($interventions[$i]['interventiondate']);
+            echo d_td($interventions[$i]['interventiontitle']);
+            echo d_td($interventions[$i]['interventionclientname']);
+            echo d_td($interventions[$i]['interventionemployeename']);
+
+            $comment = $interventions[$i]['interventioncomment'];
+            $comment_length = strlen($comment);
+            if($comment_length > 50 )
+            {
+                $comment = substr($comment, 0, 50) . ' ...';
+            }
+            echo d_td($comment);
+        }
+    ?>
+</tbody>
+<?php 
+    echo d_table_end(); 
 ?>

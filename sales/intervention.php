@@ -455,8 +455,8 @@
     <br>
     <?php 
         # Report configuration
-        require('reportwindow/interventionreport_cf.php');
-        require('inc/configreport.php');
+        # require('reportwindow/interventionreport_cf.php');
+        # require('inc/configreport.php');
     ?>
 <?php } ?>
 
