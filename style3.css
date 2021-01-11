@@ -1,0 +1,238 @@
+/*********************************************/
+/*          Base rules                       */
+/*********************************************/
+table.transparent {
+    border: none;
+}
+
+/* Button */
+button, input[type=submit] {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    padding: 0.4em 2em 0.5em;
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+
+    -moz-box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.1), 0 0.1em 0.2em rgba(0, 0, 0, 0.3), 0 -0.1em 0.07em rgba(0, 0, 0, 0.3) inset, 0 0.1em 0.07em rgba(255, 255, 255, 0.2) inset;
+    -webkit-box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.1), 0 0.1em 0.2em rgba(0, 0, 0, 0.3), 0 -0.1em 0.07em rgba(0, 0, 0, 0.3) inset, 0 0.1em 0.07em rgba(255, 255, 255, 0.2) inset;
+    box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.1), 0 0.1em 0.2em rgba(0, 0, 0, 0.3), 0 -0.1em 0.07em rgba(0, 0, 0, 0.3) inset, 0 0.1em 0.07em rgba(255, 255, 255, 0.2) inset;
+    -moz-transition: all 100ms;
+    -o-transition: all 100ms;
+    -webkit-transition: all 100ms;
+    transition: all 100ms;
+}
+
+button:hover, input[type=submit]:hover {
+    -moz-box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.4), 0 0.1em 0.2em rgba(0, 0, 0, 0.4), 0 -0.1em 0.07em rgba(0, 0, 0, 0.3) inset, 0 0.1em 0.07em rgba(255, 255, 255, 0.2) inset;
+    -webkit-box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.4), 0 0.1em 0.2em rgba(0, 0, 0, 0.4), 0 -0.1em 0.07em rgba(0, 0, 0, 0.3) inset, 0 0.1em 0.07em rgba(255, 255, 255, 0.2) inset;
+    box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.4), 0 0.1em 0.2em rgba(0, 0, 0, 0.4), 0 -0.1em 0.07em rgba(0, 0, 0, 0.3) inset, 0 0.1em 0.07em rgba(255, 255, 255, 0.2) inset;
+}
+
+button:active, input[type=submit]:active {
+    padding: 0.4em 2em 0.4em;
+    margin-top: 0.1em;
+    -moz-box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.1) inset, 0 0.1em 0.1em rgba(0, 0, 0, 0.2) inset, 0.05em 0 0.07em rgba(0, 0, 0, 0.2) inset, -0.05em 0 0.07em rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.1) inset, 0 0.1em 0.1em rgba(0, 0, 0, 0.2) inset, 0.05em 0 0.07em rgba(0, 0, 0, 0.2) inset, -0.05em 0 0.07em rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.1) inset, 0 0.1em 0.1em rgba(0, 0, 0, 0.2) inset, 0.05em 0 0.07em rgba(0, 0, 0, 0.2) inset, -0.05em 0 0.07em rgba(0, 0, 0, 0.2) inset;
+    -moz-transition: all 10ms;
+    -o-transition: all 10ms;
+    -webkit-transition: all 10ms;
+    transition: all 10ms;
+}
+
+/*********************************************/
+/*         Select Action Bar                 */
+/*********************************************/
+#selectactionbar {
+    padding: 0.2em;
+}
+
+#selectactionpage {
+    width: 100%;
+    padding: 0.1em;
+    margin: 1em;
+}
+
+.selectaction {
+    text-align: left;
+    white-space: nowrap;
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    margin-bottom: 1em;
+    margin-top: 0.2em;
+}
+
+.selectactionhomepage {
+    text-align: left;
+    white-space: nowrap;
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    width: 290px;
+    height: 150px;
+}
+
+.dashboard {
+    text-align: left;
+    white-space: nowrap;
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    width: 650px;
+    height: 500px;
+}
+
+.dashboardlink {
+    white-space: nowrap;
+    font-weight: bold;
+    padding: 1em;
+    text-align: left;
+}
+
+.dashboardcaption {
+    white-space: nowrap;
+    padding: 1em;
+    text-align: center;
+}
+
+.selectactiontitle {
+    white-space: nowrap;
+    font-weight: bold;
+    padding-left: 0.8em;
+    padding-bottom: 1em;
+}
+
+.selectactionhomepagelink {
+    white-space: nowrap;
+    font-weight: bold;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    text-align: right;
+}
+
+.selectactionimg {
+    margin: 1em;
+}
+
+.selectactionlist {
+    white-space: nowrap;
+    padding: 0.8em;
+}
+
+/*********************************************/
+/*         CSS Menu                          */
+/*********************************************/
+#cssmenu {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    width: auto;
+    text-align: left;
+
+    zoom: 1;
+    padding: 5px 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#cssmenu ul,
+#cssmenu li,
+#cssmenu a {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1;
+}
+
+#cssmenu ul {
+    display: inline-block;
+}
+
+#cssmenu ul:before {
+    content: '';
+    display: block;
+}
+
+#cssmenu ul:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+#cssmenu li {
+    float: left;
+    margin: 0 5px 0 0;
+    border: 1px solid transparent;
+}
+
+#cssmenu li a {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    padding: 8px 15px 9px 15px;
+    display: block;
+    text-decoration: none;
+
+    background: #9AC1DF;
+}
+
+#cssmenu li.active {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#cssmenu li.active a {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    display: block;
+
+    font-weight: bold;
+}
+
+#cssmenu li:hover {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#cssmenu li:hover a {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    display: block;
+}
+
+input.technicalsupport {
+    border: none;
+    padding: 0.5em;
+}
+
+/*********************************************/
+/*           Modules                         */
+/*********************************************/
+.copyright {
+    text-align: center;
+    margin: 1em;
+}

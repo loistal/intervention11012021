@@ -1,0 +1,179 @@
+/* ==========================================================================
+                        Font
+========================================================================== */
+
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+
+body {
+    font-family: 'Bree Serif', serif;
+    font-size: 11px;
+}
+
+/* ==========================================================================
+                        Message Header
+========================================================================== */
+.section-header {
+    margin-top: 2px;
+}
+
+.message-header {
+    text-align: left;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* ==========================================================================
+                            Header
+========================================================================== */
+.header .title-invoice h1 {
+    font-size: 13px;
+}
+
+.header .title-invoice h2 {
+    font-size: 15px;
+}
+
+.header .title-invoice h1, .header .title-invoice h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.header .title-invoice h1 {
+    text-transform: uppercase;
+}
+
+.declaration-period {
+    text-align: center;
+    padding: 0 15px;
+    border: 1px solid #000;
+}
+
+.declaration-period h3 {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.title-receipts {
+    color: rgb(38, 99, 152);
+    border-bottom: 1px dotted #000;
+}
+
+.title-paiement {
+    font-size: 15px;
+}
+
+.title-signature {
+    font-size: 15px;
+}
+
+table td {
+    padding: 2px;
+}
+
+/* ==========================================================================
+                            Informations contact
+========================================================================== */
+.informations-contact {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* ==========================================================================
+                            Receipts Tax
+========================================================================== */
+.value-input {
+    border-bottom: 1px dotted #000;
+    width: 100%;
+}
+
+.value-input:before {
+    content: ":";
+    display: inline-block;
+    margin-left: 3px;
+}
+
+/* ==========================================================================
+                           Table
+========================================================================== */
+table {
+    margin-top: 5px;
+}
+
+table tr td.number {
+    text-align: center;
+}
+
+.full-width-table {
+    width: 100%;
+}
+
+table tr td.title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+table tr td.text-initial {
+    text-transform: initial;
+}
+
+.is-white {
+    background-color: #F9DB9C;
+}
+
+/* ==========================================================================
+                Paiement and signature
+========================================================================== */
+.title-paiement {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.title-signature {
+    text-align: center;
+    font-weight: bold;
+}
+
+.signature {
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+                Title reference
+========================================================================== */
+.title-reference {
+    text-decoration: underline;
+}
+
+.cadre-reservation {
+    margin-top: 5px;
+}
+
+/* ==========================================================================
+                Footer
+========================================================================== */
+.message-footer {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.message-footer p {
+    padding: 0;
+    margin: 0;
+}
+
+.separator-line {
+    display: block;
+    width: 80%;
+    border-bottom: 2px solid #000;
+    margin: 0 auto;
+}
+
+.message-footer .contact {
+    font-weight: bold;
+}
+

@@ -1,0 +1,116 @@
+/*********************************************/
+/*        Print rules                        */
+/*********************************************/
+@media print {
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    html {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    #main {
+        margin: 0 !important;
+        padding: 0 !important;
+
+        padding-top: 5px !important;
+
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+    
+    #maindicp {
+      margin: 0 !important;
+      padding: 0 !important;
+
+      padding-top: 3px !important;
+      border: none !important;
+      -moz-box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+    }
+
+    .container-fluid {
+        margin: 0 !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    #share {
+        display: none;
+        margin: 0 !important;
+    }
+
+
+    .title-receipts {
+        color: rgb(21, 104, 176) !important;
+    }
+}
+
+@page {
+    size: A4;
+    margin: 0.5cm;
+}
+
+/*********************************************/
+/*         General rules                     */
+/*********************************************/
+body {
+    background-color: #DBD7D7;
+}
+
+img {
+    max-height: 80px;
+}
+
+#main {
+    background-color: #FFF;
+    padding-top: 5px;
+
+    min-height: 281mm;
+    width: 210mm;
+
+    position: relative;
+
+    margin: 20px auto 80px auto;
+
+    -moz-box-shadow: 0px 0px 20px rgba(80, 80, 80, 0.7);
+    -webkit-box-shadow: 0px 0px 20px rgba(80, 80, 80, 0.7);
+    box-shadow: 0px 0px 20px rgba(80, 80, 80, 0.7);
+}
+
+#mainlandscape {
+    background-color: #FFF;
+    padding-top: 5px;
+
+    min-height: 210mm;  
+    width: 281mm;
+
+    position: relative;
+
+    margin: 20px auto 80px auto;
+
+    -moz-box-shadow: 0px 0px 20px rgba(80, 80, 80, 0.7);
+    -webkit-box-shadow: 0px 0px 20px rgba(80, 80, 80, 0.7);
+    box-shadow: 0px 0px 20px rgba(80, 80, 80, 0.7);
+}
+
+/*********************************************/
+/*        Share invoice                      */
+/*********************************************/
+#share {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+    width: 210mm;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: right;
+}

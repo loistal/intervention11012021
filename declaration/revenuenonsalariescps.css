@@ -1,0 +1,149 @@
+/* ==========================================================================
+                           General
+========================================================================== */
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.full-width-table {
+    width: 100%;
+}
+
+.value-input {
+    border-bottom: 1px dotted #000;
+    width: 100%;
+    height: 18px;
+}
+
+/* ==========================================================================
+                           Titre
+========================================================================== */
+.title-cps {
+    text-align: center;
+}
+
+.title-principal-cps {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.title-informations-contact-cps {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.title-annee {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+             Service cotisations
+========================================================================== */
+.service-cotisations {
+    margin-top: 10px;
+}
+
+.title-service-cotisations {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.subtitle-service-cotisations {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+.tel-service-cotisations {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.email-service-cotisations {
+    font-size: 15px;
+}
+
+.return-service-cotisations {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.last-return-service-cotisations {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.last-date-service-cotisations {
+    font-size: 16px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+             Service cotisations
+========================================================================== */
+.honor-declaration {
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+            Title table
+========================================================================== */
+.title-declaration {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #FFF;
+    background-color: #777777;
+    margin-top: 5px;
+}
+
+/* ==========================================================================
+            Checkbox
+========================================================================== */
+.carre {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.signature {
+    width: 150px;
+    height: 40px;
+    border: 1px solid #000;
+    display: inline-block;
+}
+
+/* ==========================================================================
+                           Table
+========================================================================== */
+table {
+    margin-top: 2px;
+}
+
+tr, td {
+    padding: 1px;
+}
+
+.title-adresse {
+    margin: 5px 0;
+    text-align: center;
+}
+
+.title-revenus-annuels {
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    margin: 5px 0;
+}

@@ -1,0 +1,84 @@
+/* ==========================================================================
+                           General
+========================================================================== */
+body {
+    font-size: 12px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.full-width-table {
+    width: 100%;
+}
+
+.table > tbody > tr > td.vertical-align-middle {
+    vertical-align: middle;
+}
+
+.number {
+    text-align: right;
+}
+
+.gris {
+    background-color: #777777;
+}
+
+/* ==========================================================================
+                           Table
+========================================================================== */
+table {
+    margin-top: 25px;
+}
+
+.table > tbody > tr > td {
+    padding: 2px;
+}
+
+/* ==========================================================================
+                      Site plan comptable
+========================================================================== */
+.site-plan-comptable {
+    font-size: 10px;
+}
+
+/* ==========================================================================
+                     Document Title
+========================================================================== */
+.document-title {
+    text-align: center;
+}
+
+.document-title .title {
+
+}
+
+.document-title .subtitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.table > tbody > tr > td.text-small-marge-right {
+    padding-left: 10px;
+}
+
+.table > tbody > tr > td.text-marge-right {
+    padding-left: 25px;
+}
+
+.table > tbody > tr > td.text-marge-right-total {
+    padding-left: 50px;
+}
+
+/* ==========================================================================
+                 Informations footer
+========================================================================== */
+.informations {
+    font-size: 10px;
+}

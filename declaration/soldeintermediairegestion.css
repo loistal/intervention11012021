@@ -1,0 +1,114 @@
+/* ==========================================================================
+                           Main
+========================================================================== */
+#main {
+    background-color: #FFF;
+    padding: 10px 0;
+
+    min-height: 180mm;
+    width: 281mm;
+
+    position: relative;
+
+    margin: 20px auto 80px auto;
+
+    -moz-box-shadow: 0px 0px 20px rgba(80, 80, 80, 0.7);
+    -webkit-box-shadow: 0px 0px 20px rgba(80, 80, 80, 0.7);
+    box-shadow: 0px 0px 20px rgba(80, 80, 80, 0.7);
+}
+
+/*********************************************/
+/*        Share invoice                      */
+/*********************************************/
+#share {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+    width: 281mm;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* ==========================================================================
+                           General
+========================================================================== */
+body {
+    font-size: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.full-width-table {
+    width: 100%;
+}
+
+.table > tbody > tr > td.vertical-align-middle {
+    vertical-align: middle;
+}
+
+.number {
+    text-align: right;
+}
+
+/* ==========================================================================
+                           Table
+========================================================================== */
+table {
+    margin-top: 5px;
+}
+
+.table > tbody > tr > td {
+    padding: 2px;
+}
+
+/* ==========================================================================
+                      Site plan comptable
+========================================================================== */
+.site-plan-comptable {
+    font-size: 10px;
+}
+
+/* ==========================================================================
+                     Document Title
+========================================================================== */
+.document-title {
+    text-align: center;
+}
+
+.document-title .title {
+
+}
+
+.document-title .subtitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+                    Footer
+========================================================================== */
+.informations-footer {
+    font-size: 10px;
+}
+
+.table > tbody > tr > td.text-marge-right-total {
+    padding-left: 50px;
+}
+
+.table > tbody > tr > td.text-small-marge-right {
+    padding-left: 25px;
+}
+
+.table > tbody > tr > td.text-marge-right {
+    padding-left: 25px;
+}
+
+.min-width-td {
+    min-width: 50px;
+}

@@ -1,0 +1,79 @@
+/* ==========================================================================
+                        Font
+========================================================================== */
+
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+
+body {
+    font-family: 'Bree Serif', serif;
+    font-size: 10px;
+}
+
+h2 {
+    font-size: 13px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+/* ==========================================================================
+                           Statement
+========================================================================== */
+.is-grey {
+    background-color: #989898;
+}
+
+.is-white {
+    background-color: #F9DB9C;
+}
+
+/* ==========================================================================
+                           Statement
+========================================================================== */
+.header-top {
+    padding: 10px;
+}
+
+/* ==========================================================================
+                           Table
+========================================================================== */
+table {
+    margin-top: 5px;
+}
+
+table tr td.number {
+    text-align: center;
+}
+
+table td {
+    padding: 1px;
+}
+
+table tr td.title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.full-width-table {
+    width: 100%;
+}
+
+/* ==========================================================================
+                Footer
+========================================================================== */
+.signature {
+    margin: 10px 0;
+}
+
+.message-footer {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.message-footer p {
+    padding: 0;
+    margin: 0;
+}

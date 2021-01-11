@@ -1,0 +1,425 @@
+/*********************************************/
+/*            Box sizing                      */
+/*********************************************/
+*, *:before, *:after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+/*********************************************/
+/*            Reset                          */
+/*********************************************/
+html, body {
+    margin: 0;
+    padding: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+}
+
+body {
+    line-height: 1;
+    color: #000;
+    background: transparent;
+}
+
+/*********************************************/
+/*            General Rules                  */
+/*********************************************/
+form.form-transparent {
+    background-color: transparent;
+    border: none;
+}
+
+/*********************************************/
+/*          Base rules                       */
+/*********************************************/
+
+/* Table */
+table {
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+table.report {
+    border: 1px solid #000;
+}
+
+table.report th, table.report td, table.detailinput th, table.detailinput td {
+  border: 1px solid #696969; /* TODO color ??? */
+}
+
+thead {
+    font-weight: bold;
+}
+
+th {
+    padding: 1px;
+    border: 0;
+}
+
+td {
+    /*vertical-align: top; 2020 08 20*/
+    padding: 1px;
+    border: 0;
+}
+
+/* *** new styles for d_td - also copy to style_print */
+
+td.emphasis {
+  font-weight: bold;
+}
+
+td.right {
+  text-align: right;
+}
+
+td.int {
+  text-align: right;
+}
+
+td.decimal {
+  text-align: right;
+}
+
+td.currency {
+  text-align: right;
+}
+
+td.percentage {
+  text-align: right;
+}
+
+td.percent {
+  text-align: right;
+}
+
+td.date {
+  text-align: right;
+}
+
+td.center {
+  text-align: center;
+}
+
+/* *** */
+
+
+td.subheader {
+    font-weight: bold;
+}
+
+td.subtotal {
+    font-weight: bold;
+}
+
+tfoot {
+    font-weight: bold;
+}
+
+/* Form */
+form {
+    padding: 0.5em;
+    border: none;
+
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -opera-border-radius: 16px;
+    -khtml-border-radius: 16px;
+    border-radius: 16px;
+}
+
+form.loginbox {
+    margin: auto;
+    border: none;
+    background-color: transparent;
+    display: block;
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset.loginbox {
+    margin: auto;
+
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -opera-border-radius: 16px;
+    -khtml-border-radius: 16px;
+    border-radius: 16px;
+}
+
+fieldset li {
+    list-style: none;
+    white-space: nowrap;
+}
+
+legend {
+    font-size: 150%;
+
+    font-weight: bold;
+    white-space: nowrap;
+    margin-left: 10%;
+}
+
+label {
+    font-size: 80%;
+
+    float: left;
+    text-align: right;
+    margin-right: 1em;
+}
+
+label.logintext {
+    width: 30%;
+    margin-right: 0;
+}
+
+label.search {
+    width: 20%;
+    margin-right: 0;
+}
+
+input, select {
+    vertical-align: middle;
+    margin: 1px;
+}
+
+input:focus, select:focus {
+    outline-style: solid 1px #000;
+}
+
+input.searchbox {
+    font-size: 130%;
+    text-align: center;
+}
+
+input.warehouse {
+    font-size: 300%
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px white inset;
+}
+
+/* Link */
+a:link {
+    text-decoration: none
+}
+
+a:visited {
+    text-decoration: none
+}
+
+a:active {
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.button:hover {
+    text-decoration: none;
+}
+
+/* Title */
+h1 {
+    font-weight: bold;
+    font-size: 200%;
+    text-align: right;
+    white-space: nowrap;
+    margin: 1px;
+}
+
+h2 {
+    text-align: left;
+    font-size: 150%;
+    font-weight: bold;
+    white-space: nowrap;
+    margin: 1px;
+}
+
+h3 {
+    background: transparent;
+    text-align: left;
+    font-size: 100%;
+    white-space: nowrap;
+    margin: 1px;
+}
+
+h5 {
+    margin: 0;
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid;
+    padding: 0.125em;
+
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -opera-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    border-radius: 8px;
+}
+
+h6 {
+    margin: 0;
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+}
+
+p {
+    margin: 0.2em 0 0.2em 0;
+    padding: 0;
+}
+
+p.breakhere {
+    page-break-before: always;
+}
+
+img, object {
+    margin: 0;
+    max-width: 100%;
+}
+
+/* List */
+ul.droptop li {
+    position: relative;
+}
+
+img.logo_s {
+    height: auto;
+    width: auto;
+    max-height: 80px;
+}
+
+/*********************************************/
+/*           Layout Rules                    */
+/*********************************************/
+#mainprogram {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0.5em;
+    max-width: 75%;
+}
+
+#leftmenu {
+    display: inline-block;
+    padding: 0.5em;
+    max-width: 25%;
+}
+
+/* Extra Small Devices and Phones */
+@media only screen and (max-width: 480px) {
+    #mainprogram {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #leftmenu {
+        width: 100%;
+        max-width: 100%;
+
+    }
+}
+
+/*********************************************/
+/*           State Rules                    */
+/*********************************************/
+.breakme {
+    white-space: normal;
+}
+
+.logintext {
+    text-indent: 0;
+    font-size: 80%;
+}
+
+.menu {
+    text-indent: 0;
+    font-size: 65%
+}
+
+.normal {
+    text-align: justify;
+    text-indent: 0;
+}
+
+.bar {
+    text-indent: 0;
+    font-size: 75%
+}
+
+.indent {
+    text-indent: 2em;
+}
+
+.copyright {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.small {
+    font-size: 75%;
+}
+
+.tiny {
+    font-size: 75%
+}
+
+.subunit {
+    font-size: 100%;
+}
+
+.sup {
+    vertical-align: super;
+    font-size: 75%;
+}
+
+.infofact {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 50%;
+    height: 80px;
+    width: 80%
+}
+
+.dlogo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+    height: 80px
+}
+
+.myblock {
+    padding: 1em 2em 1em 1em;
+
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -opera-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+

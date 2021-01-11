@@ -1,0 +1,179 @@
+/*********************************************/
+/*        Main                               */
+/*********************************************/
+#main {
+    background-color: #FFF;
+    padding: 10px 0;
+
+    min-height: 210mm;
+    width: 281mm;
+
+    position: relative;
+
+    margin: 20px auto 80px auto;
+
+    -moz-box-shadow: 0px 0px 20px rgba(80, 80, 80, 0.7);
+    -webkit-box-shadow: 0px 0px 20px rgba(80, 80, 80, 0.7);
+    box-shadow: 0px 0px 20px rgba(80, 80, 80, 0.7);
+}
+
+/*********************************************/
+/*        Share invoice                      */
+/*********************************************/
+#share {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+    width: 281mm;
+    margin: 20px auto 0 auto;
+    text-align: right;
+}
+
+/*********************************************/
+/*        General                            */
+/*********************************************/
+body {
+    font-size: 11px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.full-width-table {
+    width: 100%;
+}
+
+.separator {
+    margin: 5px auto;
+    width: 300px;
+    height: 1px;
+    background-color: #000;
+}
+
+.carre-numero-tahiti {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000;
+    vertical-align: bottom;
+    display: inline-block;
+}
+
+.carre {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.informations {
+    font-size: 10px;
+}
+
+.informations-moyen-paiement {
+    font-size: 8px;
+    margin-top: 5px;
+}
+
+.informations-dispositions {
+    margin-top: 5px;
+    font-size: 9px;
+}
+
+.espace {
+    margin-left: 15px;
+}
+
+.mini-espace {
+    margin-left: 5px;
+}
+
+.value-input {
+    border-bottom: 1px dotted #000;
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.date-reception {
+    border: 1px solid #000;
+    height: 80px;
+}
+
+.signature-entreprise {
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+/*********************************************/
+/*        Title déclaration                  */
+/*********************************************/
+.title-header-declaration-csts {
+    text-align: center;
+}
+
+.title-declaration-csts {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.informations-title-declaration-csts {
+    font-size: 11px;
+}
+
+.subtitle-declaration-csts {
+    text-transform: uppercase;
+}
+
+.informations-subtitle-declaration-csts {
+    font-size: 8px;
+}
+
+.number {
+    text-align: right;
+}
+
+.border {
+    border: 1px solid #000;
+}
+
+.underline-value {
+    min-width: 50px;
+    display: inline-block;
+    border-bottom: 1px dotted #000;
+}
+
+.infomations-personnes {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.adresse-dicp {
+    border-top: 1px solid #000;
+    font-size: 9px;
+    text-align: center;
+}
+
+/*********************************************/
+/*       Table marge                         */
+/*********************************************/
+.table > tbody > tr > td {
+    padding: 1px;
+    border: 1px solid #000;
+}
+
+.table > tbody > tr > td.text-small-marge-right {
+    padding-left: 10px;
+}
+
+.table > tbody > tr > td.text-marge-right {
+    padding-left: 15px;
+}
+
+.table > tbody > tr > td.text-marge-right-total {
+    padding-left: 50px;
+}
