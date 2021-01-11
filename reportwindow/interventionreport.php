@@ -88,6 +88,19 @@
 
 <?php 
     showtitle_new('Interventions');
+
+    if(count($interventions) === 0) 
+    {
+        echo '<p>Pas de résultats.</p>';
+        exit();
+    }
+
+    if($startdate !== '') { echo 'Du ' . datefix($startdate); }
+    if($startdate !== '' && $enddate !== '') { echo ' jusqu\'au ' . datefix($enddate); }
+    elseif($startdate === '' && $enddate !== '') { echo 'Jusqu\'au ' . datefix($enddate); }
+    elseif($startdate === '' && $enddate === '') { echo 'Toutes les dates incluses.'; }
+    echo '<br><br>';
+
     echo d_table('report'); 
     echo d_tr();
 ?>
@@ -104,7 +117,8 @@
         for($i = 0; $i < $num_interventions; $i++)
         {
             echo d_tr();
-            echo d_td($interventions[$i]['interventionid']);
+            $intervention_id = $interventions[$i]['interventionid'];
+            echo d_td_unfiltered('<a href="reportwindow.php?report=showintervention&amp;intervention=' . $intervention_id . '" target="_blank">' . $intervention_id . '</a></td>');
             echo d_td($interventions[$i]['interventiondate']);
             echo d_td($interventions[$i]['interventiontitle']);
             echo d_td($interventions[$i]['interventionclientname']);

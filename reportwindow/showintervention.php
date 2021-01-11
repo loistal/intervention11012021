@@ -3,13 +3,19 @@
      * Intervention report with info about the intervention and its lines.
      */
 
-    $intervention_id = $_GET['intervention'];
-    if($intervention_id === 0)
+    if (isset($_GET['intervention'])) {
+        $intervention_id = $_GET['intervention'];
+    }
+    else 
     {
-        echo '<p>Pas de résultats.</p>';
+        echo '<p>Veuillez fournir un numéro d\'intervention.</p>';
         exit();
     }
-
+    if($intervention_id === '')
+    {
+        echo '<p>Veuillez fournir un numéro d\'intervention.</p>';
+        exit();
+    }
 
     $query = 'select * from intervention where interventionid=?';
     $query_prm = array($intervention_id);
@@ -34,7 +40,8 @@
     }
 ?>
 <h2><?php echo $full_title ?></h2>
-<table class="report" style="max-width: 50%;">
+<div style="max-width: 50%;">
+    <?php echo d_table('report') ?>
     <tr>
         <td><strong>Client</strong></td>
         <?php 
@@ -210,7 +217,8 @@
             <td><?php echo $total_value4; ?></td>
         </tr>
     <?php } ?>
-</table>
+    <?php echo d_table_end() ?>
+</div>
 <br>
 <?php if(count($intervention_lines) === 0) { ?>
     <h3>Pas de lignes</h3>
