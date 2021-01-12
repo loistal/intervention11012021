@@ -345,7 +345,32 @@ if (!function_exists('d_compare'))
     return '</table>';
   }
   
-  # TODO make d_thead d_thead_end d_th
+  function d_thead($class = '')
+  {
+    if($class !== '') { return '<thead class="' . $class . '"'; }
+    else { return '<thead>'; }
+  }
+
+  function d_thead_end()
+  {
+    return '</thead>';
+  }
+
+  function d_th($text = '')
+  {
+    return '<th>' . d_output($text) . '</th>';
+  }
+
+  function d_tbody($class = '')
+  {
+    if($class !== '') { return '<tbody class="' . $class . '"'; }
+    else { return '<tbody>'; }
+  }
+
+  function d_tbody_end()
+  {
+    return '</tbody>';
+  }
 
   function d_tr($subtotal = 0) # TODO look into using tr:nth-child(odd) and p:nth-child(3n+0)
   {

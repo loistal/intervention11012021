@@ -11,12 +11,30 @@
     $query_prm = array();
 
     $query_info = array();
-    if($startdate !== '') { array_push($query_info, array('interventiondate', $startdate, '>=')); }
-    if($enddate !== '') { array_push($query_info, array('interventiondate', $enddate, '<=')); }
-    if($clientid !== '') { array_push($query_info, array('interventionclientid', $clientid, '=')); }
-    if($employeemainid !== 0) { array_push($query_info, array('interventionemployeeid', $employeemainid, '=')); }
-    if($title !== '') { array_push($query_info, array('interventiontitle', $title, '=')); }
-    if($comment !== '') { array_push($query_info, array('interventioncomment', $comment, '=')); }
+    if($startdate !== '') 
+    { 
+        array_push($query_info, array('interventiondate', $startdate, '>=')); 
+    }
+    if($enddate !== '') 
+    { 
+        array_push($query_info, array('interventiondate', $enddate, '<=')); 
+    }
+    if($clientid !== '') 
+    { 
+        array_push($query_info, array('interventionclientid', $clientid, '=')); 
+    }
+    if($employeemainid !== 0) 
+    { 
+        array_push($query_info, array('interventionemployeeid', $employeemainid, '=')); 
+    }
+    if($title !== '') 
+    { 
+        array_push($query_info, array('interventiontitle', $title, '=')); 
+    }
+    if($comment !== '') 
+    { 
+        array_push($query_info, array('interventioncomment', $comment, '=')); 
+    }
 
     if(count($query_info) >= 1) { $build_query .= ' where'; }
 
@@ -26,6 +44,7 @@
         $field_name = $query_info[$i][0];
         $field_value = $query_info[$i][1];
         $field_operator = $query_info[$i][2];
+
         $build_query .= ' ' . $field_name . $field_operator . '?';
         if($i !== ($num_fields - 1)) { $build_query .= ' and'; }
         array_push($query_prm, $field_value);
@@ -34,59 +53,46 @@
     $query = $build_query . ' order by interventionid desc';
     require('inc/doquery.php');
 
-    if(!isset($num_results))
-    {
-        $num_rows = 0;
-    }
-    else 
-    {
-        $num_rows = $num_interventions = $num_results;
-        $interventions = $query_result;
+    $interventions = $query_result;
+    $num_interventions = $num_results;
+    for ($i=0; $i < $num_interventions; $i++) 
+    { 
+        if ($interventions[$i]['interventionemployeeid'] === '0') 
+        {
+            $interventions[$i]['interventionemployeeid'] = '';
+            $interventions[$i]['interventionemployeename'] = '';
+        }
+        else 
+        {
+            $query = 'select employeename, employeefirstname from employee where employeeid=?';
+            $query_prm = array($interventions[$i]['interventionemployeeid']);
+            require('inc/doquery.php');
 
-        for ($i=0; $i < $num_interventions; $i++) 
-        { 
-            $interventions[$i]['interventiondate'] = datefix($interventions[$i]['interventiondate']);
-
-            if ($interventions[$i]['interventionemployeeid'] === '0') 
+            if($num_results === 1)
             {
-                $interventions[$i]['interventionemployeeid'] = '';
-                $interventions[$i]['interventionemployeename'] = '';
+                $interventions[$i]['interventionemployeename'] = $query_result[0]['employeename'];
+                $interventions[$i]['interventionemployeename'] .= ', ';
+                $interventions[$i]['interventionemployeename'] .= $query_result[0]['employeefirstname'];
             }
-            else 
-            {
-                $query = 'select employeename, employeefirstname from employee where employeeid=?';
-                $query_prm = array($interventions[$i]['interventionemployeeid']);
-                require('inc/doquery.php');
+        }
+        if ($interventions[$i]['interventionclientid'] === '0') 
+        {
+            $interventions[$i]['interventionclientid'] = '';
+            $interventions[$i]['interventionclientname'] = '';
+        }
+        else 
+        {
+            $query = 'select clientname from client where clientid=?';
+            $query_prm = array($interventions[$i]['interventionclientid']);
+            require('inc/doquery.php');
 
-                if($num_results === 1)
-                {
-                    $interventions[$i]['interventionemployeename'] = 
-                        $query_result[0]['employeename'] 
-                        . ', ' 
-                        . $query_result[0]['employeefirstname'];
-                }
-            }
-            if ($interventions[$i]['interventionclientid'] === '0') 
+            if($num_results === 1)
             {
-                $interventions[$i]['interventionclientid'] = '';
-                $interventions[$i]['interventionclientname'] = '';
-            }
-            else 
-            {
-                $query = 'select clientname from client where clientid=?';
-                $query_prm = array($interventions[$i]['interventionclientid']);
-                require('inc/doquery.php');
-
-                if($num_results === 1)
-                {
-                    $interventions[$i]['interventionclientname'] = $query_result[0]['clientname'];
-                }
+                $interventions[$i]['interventionclientname'] = $query_result[0]['clientname'];
             }
         }
     }
-?>
 
-<?php 
     showtitle_new('Interventions');
 
     if(count($interventions) === 0) 
@@ -103,37 +109,40 @@
 
     echo d_table('report'); 
     echo d_tr();
-?>
-<thead>
-    <th>Numéro</th>
-    <th>Date</th>
-    <th>Titre</th>
-    <th>Client</th>
-    <th>Employé</th>
-    <th>Commentaire</th>
-</thead>
-<tbody>
-    <?php 
-        for($i = 0; $i < $num_interventions; $i++)
-        {
-            echo d_tr();
-            $intervention_id = $interventions[$i]['interventionid'];
-            echo d_td_unfiltered('<a href="reportwindow.php?report=showintervention&amp;intervention=' . $intervention_id . '" target="_blank">' . $intervention_id . '</a></td>');
-            echo d_td($interventions[$i]['interventiondate']);
-            echo d_td($interventions[$i]['interventiontitle']);
-            echo d_td($interventions[$i]['interventionclientname']);
-            echo d_td($interventions[$i]['interventionemployeename']);
+    echo d_thead();
+    echo d_th('Numéro');
+    echo d_th('Date');
+    echo d_th('Titre');
+    echo d_th('Client');
+    echo d_th('Employé');
+    echo d_th('Commentaire');
+    echo d_thead_end();
+    
+    echo d_tbody();
 
-            $comment = $interventions[$i]['interventioncomment'];
-            $comment_length = strlen($comment);
-            if($comment_length > 50 )
-            {
-                $comment = substr($comment, 0, 50) . ' ...';
-            }
-            echo d_td($comment);
+    for($i = 0; $i < $num_interventions; $i++)
+    {
+        echo d_tr();
+        $intervention_id = $interventions[$i]['interventionid'];
+        $link_report = '<a href="reportwindow.php?report=showintervention&amp;';
+        $link_report .= 'intervention=' . $intervention_id;
+        $link_report .= '" target="_blank">' . $intervention_id . '</a></td>';
+        echo d_td_unfiltered($link_report);
+
+        echo d_td($interventions[$i]['interventiondate'], 'date');
+        echo d_td($interventions[$i]['interventiontitle']);
+        echo d_td($interventions[$i]['interventionclientname']);
+        echo d_td($interventions[$i]['interventionemployeename']);
+
+        $comment = $interventions[$i]['interventioncomment'];
+        $comment_length = strlen($comment);
+        if($comment_length > 50 )
+        {
+            $comment = substr($comment, 0, 50) . ' ...';
         }
-    ?>
-</tbody>
-<?php 
+        echo d_td($comment);
+    }
+
+    echo d_tbody_end();
     echo d_table_end(); 
 ?>

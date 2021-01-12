@@ -1,4 +1,5 @@
-<script type='text/javascript' src='jq/jquery.js'></script>
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.4.1.js"></script>
 
 <script type='text/javascript'>
   function calcSum() {
